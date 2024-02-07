@@ -15,10 +15,10 @@
       <h4>로그인하세요</h4>
       <form action="./success.html">
         <div class="my-3">
-          <input type="text" class="form-control">
+          <input type="text" class="form-control input1">
         </div>
         <div class="my-3">
-          <input type="password" class="form-control">
+          <input type="password" class="form-control input2">
         </div>
         <button type="submit" class="btn btn-primary">전송</button>
         <button type="button" class="btn btn-danger" id="close">닫기</button>
@@ -26,15 +26,77 @@
     </div>
   </div> 
 
+  <script>
+
+    function 삼육구(num){
+      if (num % 9 == 0) {
+        console.log('짝짝');
+      } else if (num % 3 == 0) {
+        console.log('짝');
+      } else {
+        console.log('통과');
+      }
+    }
+    삼육구(7);
+
+    function 합격했냐(개론,민법){
+      if(개론 + 민법 >= 120){
+        console.log('합격!');
+      } else {
+        console.log('불합격ㅜㅜ');
+      }
+    }
+    합격했냐(70,50);
+
+    
+    document.querySelector('.btn-primary').addEventListener('click',function(e){
+      if(document.querySelector('.input1').value == ''){
+        alert('아이디입력안함');
+        e.preventDefault();
+      } else if(document.querySelector('.input2').value == ''){
+        alert('비번입력하셈');
+        e.preventDefault();
+      } else if(document.querySelector('.input2').value.length < 6){
+        alert('비밀번호는 7자 이상으로 적어주세요');
+        e.preventDefault();
+      }
+    });
+    
+  </script>
+  
+  
+
   <!-- 네비게이션 -->
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-      <span class="navbar-brand">Navbar</span>
+      <span class="navbar-brand">JSShop</span>
+      <span class="badge bg-dark">Dark 🔄</span>
       <button class="navbar-toggler" type="button">
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
   </nav> 
+
+  <script>
+
+    var count = 0;
+
+    document.querySelector('.badge').addEventListener('click', function(){
+      // 클릭 할때 마다 1씩 증가하는 기능
+      count += 1; // count++; // count = count + 1
+      console.log(count);
+      if(count % 2 !== 0){
+        document.querySelector('.badge').innerHTML = 'Light 🔄';
+        document.body.classList.add('dark');
+      } else {
+        document.querySelector('.badge').innerHTML = 'Dark 🔄';
+        document.body.classList.remove('dark');
+      }
+    });
+    
+  </script>
+  
+  
   <!-- 리스트 그룹 -->
   <ul class="list-group">
     <li class="list-group-item">An item</li>
@@ -58,10 +120,11 @@
 
     document.querySelector('#login').addEventListener('click', function(){
       document.querySelector('.black-bg').classList.add('show-modal');
-    })
+    });
     document.querySelector('#close').addEventListener('click', function(){
       document.querySelector('.black-bg').classList.remove('show-modal');
-    })
+    });
+
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
