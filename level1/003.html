@@ -50,16 +50,28 @@
 
     
     document.querySelector('.btn-primary').addEventListener('click',function(e){
-      if(document.querySelector('.input1').value == ''){
+      var 입력한값 = document.querySelector('.input1').value;
+      var 입력한값2 = document.querySelector('.input2').value;
+      if(입력한값 == ''){
         alert('아이디입력안함');
-        e.preventDefault();
-      } else if(document.querySelector('.input2').value == ''){
+        // e.preventDefault();
+      } 
+      if(!(/\S+@\S+.\S+/.test(입력한값))){
+        alert('이메일 형식 아님');
+        // e.preventDefault();
+      }
+      if(입력한값2 == ''){
         alert('비번입력하셈');
-        e.preventDefault();
-      } else if(document.querySelector('.input2').value.length < 6){
+        // e.preventDefault();
+      } else if(입력한값2.length < 6){
         alert('비밀번호는 7자 이상으로 적어주세요');
+        // e.preventDefault();
+      }
+      if(/[A-Z]/.test(입력한값2) == false){
+        alert('대문자가 있어야 합니다');
         e.preventDefault();
       }
+      
     });
     
   </script>
@@ -110,6 +122,23 @@
     <h4>Shirts on Sale</h4>
     <button id="login" class="btn btn-danger">로그인</button>
   </div>
+
+  <div class="alert alert-danger">
+    <span class="sec">5</span>초 이내 구매시 사은품 증정!
+  </div>
+
+  <script>
+    let count5 = 5;
+    
+    setInterval(function(){
+      count5--;
+      if(count5 > 0){
+        document.querySelector('.sec').innerHTML = count5;
+      } else {
+        document.querySelector('.alert-danger').style.display = 'none';
+      }
+    }, 1000);
+  </script>
 
 
   <!-- 스크립트 구역 -->
