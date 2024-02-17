@@ -22,7 +22,9 @@ console.log("***end***");
 const data1 = [1, 2, 3];
 const data2 = ['a', 'b', 'c'];
 const data3 = data1.concat(data2);
+const dataCopy = [...data1, ...data2];
 console.log(data3);
+console.log("dataCopy ::: ", dataCopy);
 
 console.log("***end***");
 
