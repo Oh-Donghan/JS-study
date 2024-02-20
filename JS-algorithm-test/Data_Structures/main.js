@@ -1,5 +1,4 @@
-let A = 123;
-console.log(A);
+const null_check = null;
+console.log(null_check === null); 
 
-A = 456;
-console.log(A);
+`Hello`
