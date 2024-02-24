@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>JS Object</h1>
-
-    <script>
-      // 객체 리터럴 방법
+// 객체 리터럴 방법
       const emptyObject = {};
 
       emptyObject.name = 'Dong';
@@ -62,6 +51,3 @@
       console.log('[3] ', user.age);
       console.log('[3] ', user.name);
       console.log('[3] ', user.get_data());
-    </script>
-  </body>
-</html>

@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Class</h1>
-
-    <script>
-      // 클래스를 이용한 객체 생성
+// 클래스를 이용한 객체 생성
       class User {
         constructor() {
           this.name = 'Dong';
@@ -70,6 +59,3 @@
 
       const oh = new User3('OH', 29);
       console.log(oh.name, oh.age, oh.get_message());
-    </script>
-  </body>
-</html>
