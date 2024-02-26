@@ -22,3 +22,5 @@ console.log(Object.getOwnPropertyDescriptors(add_1));
 console.log(Object.getOwnPropertyDescriptors(add_2));
 console.log(Object.getOwnPropertyDescriptors(add_3));
 console.log(Object.getOwnPropertyDescriptors(add_4));
+
+

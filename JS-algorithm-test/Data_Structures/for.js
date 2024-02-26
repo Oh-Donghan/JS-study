@@ -28,3 +28,34 @@ for (let x of language){
   console.log(x);
 }
 console.log(text);
+
+
+
+// for문 종류/사용
+console.log("____________");
+
+let arr = [1,2,3,4,5];
+
+for (let item of arr) {
+  console.log("for of :::",item);
+}
+
+let str = "Hello";
+
+for (let char of str) {
+  console.log("for of 문자열 :::",char);
+}
+
+for (let i = 0; i < str.length; i++){
+  console.log("for문 :::",i);
+}
+
+for (let item in str) {
+  console.log("for in 문 문자열 :::",item, typeof item);
+}
+
+let str2 = [1, 2, 3, 4, 5];
+
+str2.forEach((ele, idx) => {
+  console.log("forEach 메서드 배열 ",ele, typeof ele, ":::", idx, typeof idx);
+});

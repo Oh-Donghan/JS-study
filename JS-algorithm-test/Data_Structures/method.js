@@ -28,11 +28,11 @@ let user = { name: "Dong" };
 let admin = { name: "admin" };
 
 // hello_func 내 this 값은 런타임에 결정
-function hello_func() {
+function hello_func1() {
   console.log("hello " + this.name);
 }
-user.func = hello_func;  // this == user.name
-admin.func = hello_func;  // this == admin.name
+user.func = hello_func1;  // this == user.name
+admin.func = hello_func1;  // this == admin.name
 
 user.func();  // hello Dong
 admin.func();  // hello admin
@@ -41,4 +41,3 @@ user["func"]();  // hello Dong
 admin["func"]();  // hello admin
 
 console.log("***this***");
-
