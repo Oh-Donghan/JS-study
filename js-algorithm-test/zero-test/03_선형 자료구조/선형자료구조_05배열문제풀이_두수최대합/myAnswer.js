@@ -4,18 +4,12 @@
 function answer(nums) {
   let result = [];
 
-  // result[0] -> 1번째 최대값, result[1] -> 2번째 최대값
-  result = nums[0] > nums[1] ? [nums[0], nums[1]] : [nums[1], nums[0]];
-  for (let i = 2; i < nums.length; i++) {
-    if (nums[i] > result[0]) {
-      result[1] = result[0];
-      result[0] = nums[i];
-    } else if (nums[i] > result[1]) {
-      result[1] = nums[i];
-    }
+  function ascending_order(x, y) {
+    return x - y;
   }
+  result = nums.sort(ascending_order).slice(-2);
 
-  return result;
+  return result.reverse();
 }
 
 /* main code */
